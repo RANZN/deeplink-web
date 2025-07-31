@@ -45,9 +45,12 @@ kotlin {
     }
 }
 
-tasks.register("copy404") {
-    doLast {
-        val buildDir = file("build/dist/wasmJs/productionExecutable")
-        buildDir.resolve("404.html").writeText(buildDir.resolve("index.html").readText())
+val copy404 by tasks.registering(Copy::class) {
+    val wasmDir = layout.buildDirectory.dir("dist/wasmJs/productionExecutable")
+
+    from(wasmDir.map { it.file("index.html") }) {
+        rename("index.html", "404.html")
     }
+
+    into(wasmDir)
 }
