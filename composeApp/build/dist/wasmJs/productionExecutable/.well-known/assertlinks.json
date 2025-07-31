@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.thirdbridge.forum_fpstg",
+      "sha256_cert_fingerprints": [
+        "2B:A3:0D:17:50:0B:34:96:C9:23:36:EE:F1:77:CF:A0:B9:4B:3C:7B:F2:A2:C5:F1:7E:FB:41:92:A2:B0:C6:17"
+      ]
+    }
+  }
+]
